@@ -1,0 +1,94 @@
+<div class='resume'>
+  <div class='table'>
+    <div class='row'>
+      <div class='cell resumeHead bold'><%=resumeJSON[0].Title%>:</div>
+      <div class='cell resumeData borderBottom'>
+        <div><%= resumeJSON[0].Description %></div>
+
+        <dl>
+          <dt>
+            <div><%=resumeJSON[0].Skills.Title%>:</div>
+          </dt>
+          <dd>
+            <ul>
+              <% for(var i=0; i<resumeJSON[0].Skills.Data.length; i++) { %>
+              <li>
+                <span><%=resumeJSON[0].Skills.Data[i]%></span>
+              </li>
+              <% } %>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='cell resumeHead bold'><%=resumeJSON[1].Title%>:</div>
+      <div class='cell resumeData borderBottom'>
+        <dl>
+          <% for(var i=0; i<resumeJSON[1].Data.length; i++) { %>
+          <!-- <% resumeJSON[1].Data.forEach(function(obj) { %> -->
+            <dt class='bold'><%= resumeJSON[1].Data[i].Title %></dt>
+            <dd>
+              <% for(var j=0; j<resumeJSON[1].Data[i].Data.length; j++) { %>
+                <% if(j != 0) { %>
+                  <%=", "%>
+                <% } %>
+                <%=resumeJSON[1].Data[i].Data[j]%>
+              <% } %>
+            </dd>
+          <% } %>
+        </dl>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='cell resumeHead bold'><%=resumeJSON[2].Title%>:</div>
+      <div class='cell resumeData borderBottom'>
+        <dl>
+          <% for(var i=0; i<resumeJSON[2].Data.length; i++) { %>
+          <dt><%=resumeJSON[2].Data[i].School%>, <%=resumeJSON[2].Data[i].Location%></dt>
+          <dd><%=resumeJSON[2].Data[i].Degree%>, <%=resumeJSON[2].Data[i].Date%></dd>
+          <dd>minor in <%=resumeJSON[2].Data[i].Minor%></dd>
+          <br>
+          <dt><%=resumeJSON[2].Data[i].Coursework.Title%>:</dt>
+          <dd>
+            <ul>
+              <% for(var j=0; j<resumeJSON[2].Data[i].Coursework.Data.length; j++) { %>
+              <li><%=resumeJSON[2].Data[i].Coursework.Data[j]%></li>
+              <% } %>
+            </ul>
+          </dd>
+          <% } %>
+        </dl>
+      </div>
+    </div>
+    <div class='resumeRow'>
+      <div class='resumeCell resumeHead bold'>Related Work Experience:</div>
+      <div class='resumeCell resumeData borderBottom'>
+        <dl>
+          <dt class='bold'>Tutor</dt>
+          <dd>Angelo State University - San Angelo, Texas 76909</dd>
+          <dd>(September 2014 - May 2015)</dd>
+          <dd>
+            <ul>
+              <li>
+                Help students enhance their mastery of concepts and academic skills in Computer Science.
+              </li>
+            </ul>
+          </dd>
+          <dt class='bold'>Intern</dt>
+          <dd>Eduphoria - Austin, Texas</dd>
+          <dd>(June 2015 - August 2015)</dd>
+          <dd>
+            <ul>
+              <li>
+                Eduphoria position description
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+  <span class='center foot'>*References available upon request</span>
+</div>

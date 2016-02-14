@@ -1,0 +1,25 @@
+.resumeTable {
+  display: table;
+
+  max-width: 800px;
+  text-align: left;
+  vertical-align: text-top;
+  border-spacing:20px;
+  margin: 0 auto;
+}
+
+.resumeRow {
+  display: table-row;
+}
+
+.resumeCell {
+  display: table-cell;
+}
+
+.borderBottom {
+  border-bottom: 1px solid black;
+}
+
+.borderTop {
+  border-top: 1px solid black;
+}

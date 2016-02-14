@@ -1,0 +1,53 @@
+
+@media (max-width: 550px)
+{
+
+  .resumeTable
+  {
+    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  .resumeRow
+  {
+    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resumeCell
+  {
+    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resumeCell.resumeHead
+  {
+    width: 100%;
+    text-align: inherit;
+    font-size: 150%;
+  }
+
+  .resumeCell.resumeData
+  {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .resumeCell.resumeHead
+  {
+    width: 100%;
+    text-align: inherit;
+    vertical-align: text-top;
+    font-size: 125%;
+  }
+
+  .resumeCell.resumeHData
+  {
+    width: 100%;
+  }
+}
