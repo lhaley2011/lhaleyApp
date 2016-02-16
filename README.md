@@ -1,4 +1,4 @@
-# lhaleyApp
+# [lhaleyApp](http://www.lhaley.com/)
 
 a [Sails](http://sailsjs.org) application
 
