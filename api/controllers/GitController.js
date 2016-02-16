@@ -24,7 +24,7 @@ verify_signature = function(req) {
 module.exports = {
 
 	Pull: function (req, res) {
-		if(verify_signature(req)) {
+		if(false && verify_signature(req)) {
 			command("git checkout .");
 			command("git pull");
 			// command("pm2 reload app");
@@ -32,7 +32,7 @@ module.exports = {
 			return res.send("SUCCESS");
 		}
 		else {
-			res.status = 401;
+			res.status(401);
 			return res.send('FAILURE: You are unauthorized to make that request.');
 		}
   }
