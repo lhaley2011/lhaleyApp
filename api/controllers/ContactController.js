@@ -36,7 +36,7 @@ var htmlText = function(name, email, msg) {
 
 module.exports = {
 
-  SendEmail: function (req, res) {
+  send: function (req, res) {
     var name = req.param('name');
     var email = req.param('email');
     var subject = "Contact Page Submission From: " + name;
