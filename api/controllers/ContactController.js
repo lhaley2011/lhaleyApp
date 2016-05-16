@@ -37,6 +37,11 @@ var htmlText = function(name, email, msg) {
 module.exports = {
 
   send: function (req, res) {
+    if(sails.config.local.email.active === false) {
+        res.status(500);
+        res.send('Contact Page Disabled. No Email Sent.');
+        return;
+    }
     var name = req.param('name');
     var email = req.param('email');
     var subject = "Contact Page Submission From: " + name;
