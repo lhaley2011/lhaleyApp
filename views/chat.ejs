@@ -1,0 +1,23 @@
+<script>
+  var chatConnection = '<%= chatConnection %>';
+</script>
+
+<div class='chat'>
+  <div id="chat-main">
+    <div id="chat-div">
+      <div class="chat messageList">
+        <ul id="chatMessages" class="chat innerMessageList">
+        </ul>
+      </div>
+      <form class="chat form" id="chatForm" action="/chat/send" method="POST">
+        <p class="chat input">
+          <input type="text" name="text" class="chat-input chat" id="chatMessage" placeholder="Message" required>
+        </p>
+        <div class="chat submit">
+          <input class="chat" type="submit" name="action" value="SEND" id="chat-button-blue"/>
+          <div class="chat ease"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

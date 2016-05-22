@@ -1,0 +1,129 @@
+#chat-main{
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top:0px;
+}
+#chat-div {
+        //background-color:rgba(72,72,72,0.4);
+        padding-left:15px;
+        padding-right:15px;
+        padding-top:15px;
+        padding-bottom:15px;
+        //width: 450px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:0px;
+        border-radius: 7px;
+}
+#chatMessages {
+	list-style-type: none;
+}
+.chat.messageList {
+	height: 300px;
+	overflow-y: scroll;
+	border: 3px solid rgba(72,72,72,0.4);
+}
+.chat.innerMessageList {
+	//margin: 4px 4px;
+}
+.chat.input {
+	display: inline;
+}
+.chat.form {
+	margin-top: 4px;
+}
+.chat.submit {
+	height: 35px;
+	display: inline;
+}
+.chat-input {
+        color:#3c3c3c;
+        border-radius: 0;
+        line-height: 22px;
+        background-color: #fbfbfb;
+        padding: 13px 13px 13px 13px;
+        margin-bottom: 10px;
+        width:70%;
+        box-sizing: border-box;
+        //border: 3px solid rgba(0,0,0,0);
+        border: 3px solid rgba(72,72,72,0.4);
+}
+.chat-input:focus{
+        background: #fff;
+        box-shadow: 0;
+        border: 3px solid #3498db;
+        color: #3498db;
+        outline: none;
+        padding: 13px 13px 13px 13px;
+}
+
+@media only screen and (max-width: 580px) {
+        #chat-div{
+                width: 88%;
+        }
+	.chat.input {
+       	 	display: block;
+	}
+	.chat.submit {
+        	display: block;
+	}
+	.chat-input {
+		width: 88%;
+		float: none;
+	}
+	#chat-button-blue {
+		width: 88%;
+		float: none;
+	}
+}
+@media only screen and (max-width: 375px) {
+        .chat-input {
+                padding: 13px 13px 13px 13px;
+        }
+        .chat-input:focus{
+                padding: 13px 13px 13px 13px;
+        }
+}
+input.chat:hover, textarea.chat:hover,
+input.chat:focus, textarea.chat:focus {
+	background-color:white;
+}
+
+#chat-button-blue{
+	font-family: Arial, Helvetica, sans-serif;
+	float:right;
+	width: 25%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:10px;
+	padding-bottom:10px;
+	transition: all 0.3s;
+	margin-top:-4px;
+	font-weight:700;
+}
+
+#chat-button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+
+.chat.submit:hover {
+	color: #3498db;
+}
+
+.chat.ease {
+	width: 0px;
+	height: 35px;
+	background-color: #fbfbfb;
+	transition: .3s ease;
+}
+
+.chat.submit:hover .chat.ease{
+  width:25%;
+  background-color:white;
+}
