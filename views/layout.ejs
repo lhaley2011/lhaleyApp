@@ -5,9 +5,11 @@
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--STYLES-->
+  <link rel="stylesheet" href="/styles/chat.css">
   <link rel="stylesheet" href="/styles/contactForm.css">
   <link rel="stylesheet" href="/styles/dependencies/bootstrap-theme.css">
   <link rel="stylesheet" href="/styles/dependencies/bootstrap.css">
+  <link rel="stylesheet" href="/styles/dependencies/toastr.css">
   <link rel="stylesheet" href="/styles/home.css">
   <link rel="stylesheet" href="/styles/importer.css">
   <link rel="stylesheet" href="/styles/index.css">
@@ -32,10 +34,19 @@
       <script src="/js/dependencies/jquery-2.1.4.js"></script>
       <script src="/js/dependencies/bootstrap.js"></script>
       <script src="/js/dependencies/googleAnalytics.js"></script>
+      <script src="/js/dependencies/toastr.js"></script>
+      <script src="/js/alerts.js"></script>
       <script src="/js/contactForm.js"></script>
       <script src="/js/home-image-load.js"></script>
       <script src="/js/navbar-highlight.js"></script>
       <!--SCRIPTS END-->
+
+     <!-- Loop through all scripts that passed from controller -->
+     <% if (scripts) { %>
+          <% for (i = 0; i < scripts.length; i++) { %>
+               <script src="<%- scripts[i] %>"></script>
+         <% } %>
+     <% } %>
 </body>
 
 </html>

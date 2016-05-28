@@ -38,6 +38,7 @@ module.exports.routes = {
   '/projects': 'Projects.Summary',
   '/resume': 'Resume.Summary',
   '/contact': 'Contact.Summary',
+  '/chat': 'Chat.Summary',
 
   /***************************************************************************
   *                                                                          *
