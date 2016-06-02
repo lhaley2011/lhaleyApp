@@ -1,63 +1,77 @@
 <div class='resume'>
-  <div class='table'>
-    <div class='row'>
-      <div class='cell resumeHead bold'><%=resumeJSON[0].Title%>:</div>
-      <div class='cell resumeData borderBottom'>
-        <div><%= resumeJSON[0].Description %></div>
-
+  <div class='resumeTable'>
+    <div class='resumeRow'>
+      <div class='resumeCell resumeHead bold'>Summary of Qualifications:</div>
+      <div class='resumeCell resumeData borderBottom'>
+        <div>
+          Experience includes detailed knowledge of computer programming, with education in database skills. Experience in school has developed a hardworking and driven ability which includes completing tasks in a timely manner.
+        </div>
         <dl>
           <dt>
-            <div><%=resumeJSON[0].Skills.Title%>:</div>
+            <div>Knowledge and Skill Areas:</div>
           </dt>
           <dd>
             <ul>
-              <% for(var i=0; i<resumeJSON[0].Skills.Data.length; i++) { %>
               <li>
-                <span><%=resumeJSON[0].Skills.Data[i]%></span>
+                <span>Software development</span>
               </li>
-              <% } %>
+              <li>
+                <span>Object-oriented programming</span>
+              </li>
+              <li>
+                <span>Problem analysis and resolution</span>
+              </li>
+              <li>
+                <span>Requirement gathering and analysis</span>
+              </li>
+              <li>
+                <span>Software testing and troubleshooting</span>
+              </li>
+              <li>
+                <span>Technical writing skills</span>
+              </li>
             </ul>
           </dd>
         </dl>
       </div>
     </div>
-    <div class='row'>
-      <div class='cell resumeHead bold'><%=resumeJSON[1].Title%>:</div>
-      <div class='cell resumeData borderBottom'>
+    <div class='resumeRow'>
+      <div class='resumeCell resumeHead bold'>Technical Knowledge and Expertise:</div>
+      <div class='resumeCell resumeData borderBottom'>
         <dl>
-          <% for(var i=0; i<resumeJSON[1].Data.length; i++) { %>
-          <!-- <% resumeJSON[1].Data.forEach(function(obj) { %> -->
-            <dt class='bold'><%= resumeJSON[1].Data[i].Title %></dt>
-            <dd>
-              <% for(var j=0; j<resumeJSON[1].Data[i].Data.length; j++) { %>
-                <% if(j != 0) { %>
-                  <%=", "%>
-                <% } %>
-                <%=resumeJSON[1].Data[i].Data[j]%>
-              <% } %>
-            </dd>
-          <% } %>
+          <dt class='bold'>Operating Systems</dt>
+          <dd>Microsoft, Macintosh, Linux, Unix</dd>
+          <dt class='bold'>Programming Languages</dt>
+          <dd>C++, C#, Scala, Assembly, PHP, HTML, CSS</dd>
+          <dt class='bold'>Development Tools</dt>
+          <dd>Microsoft Visual Studios, Xcode, IntelliJ Idea</dd>
+          <dt class='bold'>Certifications</dt>
+          <dd>Microsoft Office Specialist 2003 in Word and Excel</dd>
         </dl>
       </div>
     </div>
-    <div class='row'>
-      <div class='cell resumeHead bold'><%=resumeJSON[2].Title%>:</div>
-      <div class='cell resumeData borderBottom'>
+    <div class='resumeRow'>
+      <div class='resumeCell resumeHead bold'>Education:</div>
+      <div class='resumeCell resumeData borderBottom'>
         <dl>
-          <% for(var i=0; i<resumeJSON[2].Data.length; i++) { %>
-          <dt><%=resumeJSON[2].Data[i].School%>, <%=resumeJSON[2].Data[i].Location%></dt>
-          <dd><%=resumeJSON[2].Data[i].Degree%>, <%=resumeJSON[2].Data[i].Date%></dd>
-          <dd>minor in <%=resumeJSON[2].Data[i].Minor%></dd>
+          <dt>Angelo State University, San Angelo, TX</dt>
+          <dd>Bachelor of Science in Computer Science, May 2015</dd>
+          <dd>minor in Mathematics</dd>
           <br>
-          <dt><%=resumeJSON[2].Data[i].Coursework.Title%>:</dt>
+          <dt>Relevant Coursework:</dt>
           <dd>
             <ul>
-              <% for(var j=0; j<resumeJSON[2].Data[i].Coursework.Data.length; j++) { %>
-              <li><%=resumeJSON[2].Data[i].Coursework.Data[j]%></li>
-              <% } %>
+              <li>Java Programming</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Theory of Algorithms</li>
+              <li>Web Database Design</li>
+              <li>Database Design and Management</li>
+              <li>Digital Electronic Design</li>
+              <li>Technical Writing</li>
+              <li>Discrete Mathematics</li>
+              <li>Calculus</li>
             </ul>
           </dd>
-          <% } %>
         </dl>
       </div>
     </div>
@@ -65,13 +79,13 @@
       <div class='resumeCell resumeHead bold'>Related Work Experience:</div>
       <div class='resumeCell resumeData borderBottom'>
         <dl>
-          <dt class='bold'>Tutor</dt>
-          <dd>Angelo State University - San Angelo, Texas 76909</dd>
-          <dd>(September 2014 - May 2015)</dd>
+          <dt class='bold'>Programmer I</dt>
+          <dd>Texas Ethics Commission - Austin, Texas</dd>
+          <dd>(January 2016 - Present)</dd>
           <dd>
             <ul>
               <li>
-                Help students enhance their mastery of concepts and academic skills in Computer Science.
+                Provided technical support and data management.
               </li>
             </ul>
           </dd>
@@ -85,10 +99,26 @@
               </li>
             </ul>
           </dd>
+	  <dt class='bold'>Tutor</dt>
+          <dd>Angelo State University - San Angelo, Texas</dd>
+          <dd>(September 2014 - May 2015)</dd>
+          <dd>
+            <ul>
+              <li>
+                Help students enhance their mastery of concepts and academic skills in Computer Science.
+              </li>
+            </ul>
+          </dd>
         </dl>
       </div>
     </div>
-
+    <div class='resumeRow'>
+      <div class='resumeCell resumeHead bold'>Awards and Recognition:</div>
+      <div class='resumeCell resumeData'>
+        Charlie Wooten Grant - 2011 & 2013<br>
+        Cum Laude Honor, Mason High School - May 2011
+      </div>
+    </div>
   </div>
   <span class='center foot'>*References available upon request</span>
 </div>

@@ -5,13 +5,7 @@
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--STYLES-->
-  <link rel="stylesheet" href="/styles/dependencies/bootstrap-theme.css">
-  <link rel="stylesheet" href="/styles/dependencies/bootstrap.css">
-  <link rel="stylesheet" href="/styles/dependencies/toastr.css">
-  <link rel="stylesheet" href="/styles/importer.css">
-  <link rel="stylesheet" href="/styles/index.css">
-  <link rel="stylesheet" href="/styles/table.css">
-  <link rel="stylesheet" href="/styles/tableSmall.css">
+  <link rel="stylesheet" href="/min/production.min.css">
   <!--STYLES END-->
 </head>
 <body>
@@ -19,7 +13,7 @@
     <div class='body'>
       <div class='content'>
             <!-- Loop through all styles that passed from controller -->
-            <% if (false && styles) { %>
+            <% if (styles) { %>
               <% for (i = 0; i < styles.length; i++) { %>
                 <link rel="stylesheet" href="<%- styles[i] %>">
               <% } %>
@@ -38,13 +32,7 @@
       
       <!--TEMPLATES END-->
       <!--SCRIPTS-->
-      <script src="/js/dependencies/sails.io.js"></script>
-      <script src="/js/dependencies/jquery-2.1.4.js"></script>
-      <script src="/js/dependencies/bootstrap.js"></script>
-      <script src="/js/dependencies/googleAnalytics.js"></script>
-      <script src="/js/dependencies/toastr.js"></script>
-      <script src="/js/alerts.js"></script>
-      <script src="/js/navbar-highlight.js"></script>
+      <script src="/min/production.min.js"></script>
       <!--SCRIPTS END-->
 
      <!-- Loop through all scripts that passed from controller -->
