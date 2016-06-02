@@ -13,6 +13,9 @@ module.exports = {
    * `ResumeController.Summary()`
    */
   Summary: function (req, res) {
+    res.locals.styles = [
+        'styles/exclude/resume.css'
+    ];
     return res.view('resumeOld');
   },
 

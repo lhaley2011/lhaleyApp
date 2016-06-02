@@ -67,6 +67,12 @@ module.exports = {
    * `ContactController.Summary()`
    */
   Summary: function (req, res) {
+    res.locals.scripts = [
+        'js/exclude/contact.js'
+    ];
+    res.locals.styles = [
+        'styles/exclude/contact.css'
+    ];
     return res.view('contact');
   }
 };

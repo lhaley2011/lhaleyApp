@@ -20,7 +20,12 @@ module.exports = {
    * `HomeController.Summary()`
    */
   Summary: function (req, res) {
-    // console.log(req);
+    res.locals.scripts = [
+        'js/exclude/home-image-load.js'
+    ];
+    res.locals.styles = [
+        'styles/exclude/home.css'
+    ];
     return res.view('home');
   }
 };
