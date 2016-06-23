@@ -15,6 +15,10 @@ module.exports = {
   Summary: function (req, res) {
     return res.view('resumeOld');
   },
+  
+  pdf: function(req, res) {
+    return res.view('resumePdf');
+  },
 
   Test: function (req, res) {
     return res.view('resume', {resumeJSON: resume});
