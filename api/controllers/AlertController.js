@@ -7,7 +7,7 @@
 
 module.exports = {
   send: function (req, res) {
-console.log("alert controller");
+    if(!sails.config.local.alert.active) return res.forbidden();
     if (!req.param('data') || !req.param('connection')) {
         var msg = 'No `data` or  `connection` specified';
         sails.log.error('Chat :: ' + msg + ': - ' + req.param('connection') + ' - ' + req.param('data'));

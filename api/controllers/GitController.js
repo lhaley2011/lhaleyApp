@@ -24,7 +24,7 @@ verify_signature = function(req) {
 module.exports = {
 
 	Pull: function (req, res) {
-		if(false && verify_signature(req)) {
+		if(sails.config.local.git.active && verify_signature(req)) {
 			command("git checkout .");
 			command("git pull");
 			// command("pm2 reload app");

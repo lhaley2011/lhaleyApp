@@ -72,6 +72,9 @@ module.exports = {
     res.locals.scripts = [
         'js/exclude/chat.js'
     ];
+    res.locals.styles = [
+        'styles/exclude/chat.css'
+    ];
     return res.view('chat', {'chatConnection' : 'chat message'});
   }
 };

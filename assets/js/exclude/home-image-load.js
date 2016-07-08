@@ -1,6 +1,6 @@
 function setPicture(winSize) {
-    var landscape = "http://lhaley.com/images/home_landscape.gif";
-    var portrait = "http://lhaley.com/images/home_portrait.gif";
+    var landscape = "http://lhaley.com/images/home_landscape.jpg";
+    var portrait = "http://lhaley.com/images/home_portrait.jpg";
     var img = $('#home-image')[0];
     if($(window).width() < winSize) {
         if(img.src != portrait) {
@@ -15,16 +15,3 @@ function setPicture(winSize) {
         }
     }
 }
-
-(function($) {
-
-  // io.socket.get("/home/image", function(res) {
-  //   console.log(res);
-  //   $('#home-image').attr("src", res)
-  // });
-    //setPicture(760);
-    //$(window).resize(function() {
-    //    setPicture(760);
-    //});
-
-})(jQuery);
