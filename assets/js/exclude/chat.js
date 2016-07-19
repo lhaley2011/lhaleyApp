@@ -9,21 +9,22 @@ var addChatMessage = function(html) {
   return;
 }
 
-var addExternalChatMessage = function(msg) {
-  addChatMessage('Guest - '+msg+''); 
+var addExternalChatMessage = function(res) {
+  addChatMessage(res.name + ' - ' + res.message); 
   return;
 }
 
-var addOwnChatMessage = function(msg) {
-  addChatMessage('<b>You - '+msg+'</b>');
+var addOwnChatMessage = function(message) {
+  addChatMessage('<b>You - '+message+'</b>');
   return;
 }
 
-var sendChatMessage = function(room, msg) {
+var sendChatMessage = function(room, msg, name) {
+  var name = name || 'Guest';
   var url = "/chat/send";
   var data = {};
   data['roomName'] = room;
-  data['data'] = msg;
+  data['data'] = {name: name, message: msg};
   data['connection'] = 'chat message';
   io.socket.post(url, data, function(resData, jwres) {
     //console.log(resData);
@@ -43,9 +44,9 @@ var joinRoom = function(roomName) {
 $(function() {
   
   if(chatConnection != undefined) {
-    io.socket.on('chat message', function(msg) {
-      console.log('chat message: ' + msg);
-      addExternalChatMessage(msg);
+    io.socket.on('chat message', function(res) {
+      console.log('chat message: ' + res);
+      addExternalChatMessage(res);
     });
   }
 
