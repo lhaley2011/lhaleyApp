@@ -10,8 +10,6 @@ module.exports = {
    * `ResumeController.Summary()`
    */
   Summary: function (req, res) {
-    return res.view('resume', {
-      styles: ['styles/exclude/resume.css']
-    });    
+    return res.view('resume');    
   }
 }

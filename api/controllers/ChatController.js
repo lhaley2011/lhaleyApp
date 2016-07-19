@@ -69,7 +69,7 @@ module.exports = {
    * `ChatController.Summary()`
    */
   Summary: function (req, res) {
-    return res.view('contact', {
+    return res.view('chat', {
       scripts: ['js/exclude/chat.js'],
       styles: ['styles/exclude/chat.css'],
       chatConnection: 'chat message'
