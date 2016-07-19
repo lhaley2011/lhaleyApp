@@ -69,13 +69,11 @@ module.exports = {
    * `ChatController.Summary()`
    */
   Summary: function (req, res) {
-    res.locals.scripts = [
-        'js/exclude/chat.js'
-    ];
-    res.locals.styles = [
-        'styles/exclude/chat.css'
-    ];
-    return res.view('chat', {'chatConnection' : 'chat message'});
+    return res.view('chat', {
+      scripts: ['js/exclude/chat.js'],
+      styles: ['styles/exclude/chat.css'],
+      chatConnection: 'chat message'
+    }); 
   }
 };
 
