@@ -53,6 +53,14 @@ module.exports = {
   },
 
   send: function (req, res) {
+    if(sails.config.local.chat.active === false) {
+        res.status(500);
+        var id = getSocketId(req);
+        var msg = {name:'Webmaster', message:'Chat Page Disabled. No Message Sent.'};
+        sails.sockets.broadcast(id, req.param('connection'), msg);
+        res.send('Chat Page Disabled. No Message Sent.');
+        return;
+    }
     if (!req.param('data') || !req.param('connection') || !req.param('roomName')) {
         var msg = 'No `data`, `connection`, or `room` specified';
         sails.log.error('Chat :: ' + msg + ': - ' + req.param('connection') + ' - ' + req.param('roomName') + ' - ' + req.param('data'));
